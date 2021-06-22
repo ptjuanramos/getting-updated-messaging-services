@@ -1,4 +1,5 @@
-﻿using System;
+﻿using CoordinateBookingCommon;
+using System;
 
 namespace CoordinateBooking.Models
 {
@@ -8,5 +9,16 @@ namespace CoordinateBooking.Models
         public string BookingReference { get; set; }
         public string Name { get; set; }
         public string Email { get; set; }
+
+        public static explicit operator BookingRequest(BookingViewModel viewModel) 
+        {
+            return new BookingRequest
+            {
+                Id = viewModel.Id,
+                BookingReference = viewModel.BookingReference,
+                Email = viewModel.Email,
+                Name = viewModel.Name
+            };
+        }
     }
 }

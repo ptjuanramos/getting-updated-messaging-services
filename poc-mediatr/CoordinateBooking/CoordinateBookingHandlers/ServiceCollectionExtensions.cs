@@ -1,4 +1,9 @@
-﻿using System;
+﻿using CoordinateBooking.Handlers;
+using CoordinateBookingCommon;
+using CoordinateBookingDataAccess;
+using MediatR;
+using Microsoft.Extensions.DependencyInjection;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -8,5 +13,12 @@ namespace CoordinateBookingHandlers
 {
     public static class ServiceCollectionExtensions
     {
+        public static void AddBookingHandlers(this IServiceCollection services)
+        {
+            services.AddDataAccess();
+
+            services.AddTransient<IRequestHandler<BatchBookingRequest, BatchBookingResponse>, BatchBookingsHandler>();
+            services.AddTransient<IRequestHandler<BookingRequest, BookingResponse>, SingleBookingHandler>();
+        }
     }
 }

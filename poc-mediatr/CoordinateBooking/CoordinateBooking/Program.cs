@@ -1,15 +1,20 @@
+using CoordinateBookingHandlers;
 using MediatR;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.OpenApi.Models;
+using SayanInvestorAuditing;
 using System.Reflection;
 
 WebApplicationBuilder hostBuilder = WebApplication.CreateBuilder(args);
 
 hostBuilder.Services.AddControllers();
-
 hostBuilder.Services.AddMediatR(Assembly.GetExecutingAssembly());
+
+hostBuilder.Services.AddBookingHandlers();
+
+hostBuilder.Services.AddSayanAuditings();
 
 hostBuilder.Services.AddSwaggerGen(c =>
 {

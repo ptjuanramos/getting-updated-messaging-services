@@ -4,7 +4,7 @@ using System.Text.Json;
 
 namespace CoordinateBookingCommon
 {
-    public class BookingRequest : IRequest
+    public class BookingRequest : IRequest<BookingResponse>, INotification
     {
         public Guid Id { get; set; }
         public string BookingReference { get; set; }

@@ -4,7 +4,7 @@ using Microsoft.Extensions.Logging;
 
 namespace SayanInvestorAuditing
 {
-    public class SingleBookingAuditingHandler : RequestHandler<BookingRequest>
+    public class SingleBookingAuditingHandler : NotificationHandler<BookingRequest>
     {
         private readonly ILogger<SingleBookingAuditingHandler> _logger;
 

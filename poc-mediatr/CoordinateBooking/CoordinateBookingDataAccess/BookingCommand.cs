@@ -1,19 +1,21 @@
 ﻿using CoordinateBookingDataAccess.Models;
 using System;
 using System.Collections.Generic;
+using System.Linq;
+using System.Threading.Tasks;
 
 namespace CoordinateBookingDataAccess
 {
     internal class BookingCommand : IBookingCommand
     {
-        public IEnumerable<Booking> BatchCreate(IReadOnlyCollection<Booking> bookings)
+        public Task<IEnumerable<Booking>> BatchCreateAsync(IReadOnlyCollection<Booking> bookings)
         {
-            throw new NotImplementedException();
+            return Task.FromResult(bookings.AsEnumerable());
         }
 
-        public Booking Create(Booking booking)
+        Task<Booking> IBookingCommand.CreateAsync(Booking booking)
         {
-            throw new NotImplementedException();
+            return Task.FromResult(booking);
         }
     }
 }

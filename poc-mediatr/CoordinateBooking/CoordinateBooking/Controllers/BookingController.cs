@@ -1,6 +1,9 @@
 ﻿using CoordinateBooking.Models;
+using CoordinateBookingCommon;
+using MediatR;
 using Microsoft.AspNetCore.Mvc;
 using System.Collections.Generic;
+using System.Threading.Tasks;
 
 namespace CoordinateBooking.Controllers
 {
@@ -8,16 +11,37 @@ namespace CoordinateBooking.Controllers
     [Route("[controller]")]
     public class BookingController : ControllerBase
     {
-        [HttpPost("[controller]/single-book")]
-        public BookingResponseViewModel SingleBook(BookingViewModel model)
+        private readonly IMediator _mediator;
+
+        public BookingController(IMediator mediator)
         {
-            return null;
+            _mediator = mediator;
+        }
+
+        [HttpPost("[controller]/single-book")]
+        public async Task<BookingResponseViewModel> SingleBook(BookingViewModel model)
+        {
+            BookingRequest bookingRequest = (BookingRequest)model;
+            BookingResponse bookingResponse = await _mediator.Send(bookingRequest);
+            
+            await _mediator.Publish(bookingRequest);
+
+            BookingResponseViewModel responseViewModel = (BookingResponseViewModel)bookingResponse;
+
+            return responseViewModel;
         }
 
         [HttpPost("[controller]/batch-book")]
-        public IEnumerable<BookingResponseViewModel> BatchBook(IEnumerable<BookingViewModel> models)
+        public async Task<IEnumerable<BookingResponseViewModel>> BatchBook(BatchBookingViewModel model)
         {
-            return null;
+            BatchBookingRequest bookingRequest = (BatchBookingRequest)model;
+            BatchBookingResponse bookingResponse = await _mediator.Send(bookingRequest);
+
+            await _mediator.Publish(bookingRequest);
+
+            BatchBookingResponseViewModel responseViewModel = (BatchBookingResponseViewModel)bookingResponse;
+
+            return responseViewModel;
         }
     }
 }

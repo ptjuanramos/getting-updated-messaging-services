@@ -12,6 +12,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\CoordinateBookingHandlers\CoordinateBookingHandlers.csproj" />
+    <ProjectReference Include="..\SayanInvestorAuditing\SayanInvestorAuditing.csproj" />
   </ItemGroup>
 
 </Project>

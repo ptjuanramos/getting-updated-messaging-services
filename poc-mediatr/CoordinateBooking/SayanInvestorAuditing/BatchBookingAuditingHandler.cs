@@ -9,11 +9,11 @@ using System.Threading.Tasks;
 
 namespace SayanInvestorAuditing
 {
-    public class BatchBookingAuditing : RequestHandler<BatchBookingRequest>
+    public class BatchBookingAuditingHandler : NotificationHandler<BatchBookingRequest>
     {
-        private readonly ILogger<BatchBookingAuditing> _logger;
+        private readonly ILogger<BatchBookingAuditingHandler> _logger;
 
-        public BatchBookingAuditing(ILogger<BatchBookingAuditing> logger)
+        public BatchBookingAuditingHandler(ILogger<BatchBookingAuditingHandler> logger)
         {
             _logger = logger;
         }

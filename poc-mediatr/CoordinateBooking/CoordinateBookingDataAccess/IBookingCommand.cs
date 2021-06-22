@@ -9,7 +9,7 @@ namespace CoordinateBookingDataAccess
 {
     public interface IBookingCommand
     {
-        public Booking Create(Booking booking);
-        public IEnumerable<Booking> BatchCreate(IReadOnlyCollection<Booking> bookings);
+        public Task<Booking> CreateAsync(Booking booking);
+        public Task<IEnumerable<Booking>> BatchCreateAsync(IReadOnlyCollection<Booking> bookings);
     }
 }
