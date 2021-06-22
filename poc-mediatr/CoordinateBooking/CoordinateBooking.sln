@@ -3,11 +3,15 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.31402.337
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CoordinateBooking", "CoordinateBooking\CoordinateBooking.csproj", "{59DEA19B-3086-46FF-BC03-3E08C78B68BF}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CoordinateBooking", "CoordinateBooking\CoordinateBooking.csproj", "{59DEA19B-3086-46FF-BC03-3E08C78B68BF}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CoordinateBookingDataAccess", "CoordinateBookingDataAccess\CoordinateBookingDataAccess.csproj", "{1FC4936E-2941-4600-998C-3B29BFC055CF}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CoordinateBookingDataAccess", "CoordinateBookingDataAccess\CoordinateBookingDataAccess.csproj", "{1FC4936E-2941-4600-998C-3B29BFC055CF}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CoordinateBookingHandlers", "CoordinateBookingHandlers\CoordinateBookingHandlers.csproj", "{57C98830-2FCE-4FE0-887C-1513ED62A03C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CoordinateBookingHandlers", "CoordinateBookingHandlers\CoordinateBookingHandlers.csproj", "{57C98830-2FCE-4FE0-887C-1513ED62A03C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SayanInvestorAuditing", "SayanInvestorAuditing\SayanInvestorAuditing.csproj", "{3D318193-343E-4652-BDFC-7CFEB64E54CC}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CoordinateBookingCommon", "CoordinateBookingCommon\CoordinateBookingCommon.csproj", "{B251A41C-4680-4E65-B3D7-13938B7ADE88}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -27,6 +31,14 @@ Global
 		{57C98830-2FCE-4FE0-887C-1513ED62A03C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{57C98830-2FCE-4FE0-887C-1513ED62A03C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{57C98830-2FCE-4FE0-887C-1513ED62A03C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3D318193-343E-4652-BDFC-7CFEB64E54CC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3D318193-343E-4652-BDFC-7CFEB64E54CC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3D318193-343E-4652-BDFC-7CFEB64E54CC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3D318193-343E-4652-BDFC-7CFEB64E54CC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B251A41C-4680-4E65-B3D7-13938B7ADE88}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B251A41C-4680-4E65-B3D7-13938B7ADE88}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B251A41C-4680-4E65-B3D7-13938B7ADE88}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B251A41C-4680-4E65-B3D7-13938B7ADE88}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

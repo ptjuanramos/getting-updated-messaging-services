@@ -1,5 +1,5 @@
-﻿using CoordinateBookingDataAccess;
-using CoordinateBookingHandlers;
+﻿using CoordinateBookingCommon;
+using CoordinateBookingDataAccess;
 using MediatR;
 using System;
 using System.Threading;
