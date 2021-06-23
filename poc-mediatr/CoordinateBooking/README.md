@@ -1,0 +1,1 @@
+![](.\mediator-diagram.png)

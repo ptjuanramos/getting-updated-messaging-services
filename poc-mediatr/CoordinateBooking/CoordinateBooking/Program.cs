@@ -14,7 +14,7 @@ hostBuilder.Services.AddMediatR(Assembly.GetExecutingAssembly());
 
 hostBuilder.Services.AddBookingHandlers();
 
-hostBuilder.Services.AddSayanAuditings();
+//hostBuilder.Services.AddSayanAuditings();
 
 hostBuilder.Services.AddSwaggerGen(c =>
 {
