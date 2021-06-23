@@ -1,1 +1,1 @@
-![](.\mediator-diagram.png)
+![](mediator-diagram.png)
